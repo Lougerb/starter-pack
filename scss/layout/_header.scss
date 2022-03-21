@@ -2,6 +2,20 @@
   display: block;
 
   &__logo {
+    display: block;
+    height: 60px;
+    width: 120px;
+    background-color: #ccc;
+    text-align: center;
+
+    &__anchor {
+      text-decoration: none;
+
+      span {
+        line-height: 60px;
+      }
+    }
+
     &__img {
       display: block;
     }

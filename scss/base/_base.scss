@@ -6,6 +6,8 @@
 }
 body {
   min-width: 1366px;
+  font-family: $font-primary;
+  font-size: 1rem;
 
   @include mq {
     min-width: 0;

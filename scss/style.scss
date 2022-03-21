@@ -1,12 +1,12 @@
 //Mixins
 @import "mixins/media_query";
 
-// Base
-@import "base/base";
-
 // Variables
 @import "variable/color";
 @import "variable/typography";
+
+// Base
+@import "base/base";
 
 // Layout
 @import "layout/main";
