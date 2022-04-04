@@ -4,6 +4,10 @@
   // border-bottom: 1px solid black;
   display: flex;
 
+  @include mq_sp {
+    height: 6rem;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -15,8 +19,13 @@
     top: 0;
     left: 0;
     padding: 0 2rem;
-    z-index: 999;
+    z-index: 99;
     background-color: #fff;
+
+    @include mq_sp {
+      height: 6rem;
+      padding: 0 1rem;
+    }
   }
 
   &__logo {

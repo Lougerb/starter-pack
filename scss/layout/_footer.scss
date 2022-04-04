@@ -5,8 +5,10 @@
   padding: 3.5rem 0 1.1rem;
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    @include mq_pc {
+      display: flex;
+      justify-content: space-between;
+    }
     color: #707070;
   }
 
