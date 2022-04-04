@@ -1,3 +1,74 @@
 .l-footer {
   display: block;
+  // border: 1px solid red;
+  border-top: 1px solid #707070;
+  padding: 3.5rem 0 1.1rem;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    color: #707070;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      margin-right: 2rem;
+
+      a {
+        display: block;
+        border: 1px solid #707070;
+        height: 8rem;
+        width: 12rem;
+        text-align: center;
+        line-height: 7.8rem;
+        font-size: 3.2rem;
+        color: #707070;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &__contact {
+      &__text {
+        line-height: 1.5;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__sitemap {
+    display: flex;
+
+    &__list {
+      &.is-col-1 {
+        margin-right: 5rem;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__anchor {
+      line-height: 1;
+      color: #707070;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 3rem;
+    text-align: center;
+    list-style: 1;
+  }
 }

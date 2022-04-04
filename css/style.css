@@ -10,10 +10,21 @@
   max-width: 100%;
 }
 
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  color: #707070;
+}
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 2.667vw;
+  }
+}
+
 body {
   min-width: 1366px;
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 750px) {
   body {
@@ -30,44 +41,187 @@ li {
 }
 
 a {
-  color: black;
+  color: #707070;
   text-decoration: none;
 }
 
 .l-main {
   display: block;
+  padding: 2rem 0;
 }
 
 .l-header {
-  display: block;
+  height: 10rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.l-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  -webkit-box-shadow: 0 1px 4px #707070;
+          box-shadow: 0 1px 4px #707070;
+  top: 0;
+  left: 0;
+  padding: 0 2rem;
+  z-index: 999;
+  background-color: #fff;
 }
 .l-header__logo {
   display: block;
   height: 60px;
   width: 120px;
-  background-color: #ccc;
+  background-color: transparent;
+  border: 1px solid #707070;
   text-align: center;
 }
 .l-header__logo__anchor {
   text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.l-header__logo__anchor:hover {
+  opacity: 0.7;
 }
 .l-header__logo__anchor span {
-  line-height: 60px;
+  line-height: 6rem;
+  color: #707070;
 }
 .l-header__logo__img {
   display: block;
 }
 
 .l-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.l-nav__li {
   display: block;
+  height: 100%;
+}
+.l-nav__anchor {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+  line-height: 10rem;
+  color: #707070;
+  position: relative;
+}
+.l-nav__anchor:hover {
+  opacity: 0.7;
+}
+.l-nav__anchor:hover::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-left: 1px solid #707070;
+  border-right: 1px solid #707070;
+  top: 0;
+  left: 0;
 }
 
 .l-footer {
   display: block;
+  border-top: 1px solid #707070;
+  padding: 3.5rem 0 1.1rem;
+}
+.l-footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #707070;
+}
+.l-footer__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.l-footer__details__logo {
+  margin-right: 2rem;
+}
+.l-footer__details__logo a {
+  display: block;
+  border: 1px solid #707070;
+  height: 8rem;
+  width: 12rem;
+  text-align: center;
+  line-height: 7.8rem;
+  font-size: 3.2rem;
+  color: #707070;
+}
+.l-footer__details__logo a:hover {
+  opacity: 0.7;
+}
+.l-footer__details__contact__text {
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+.l-footer__sitemap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.l-footer__sitemap__list.is-col-1 {
+  margin-right: 5rem;
+}
+.l-footer__sitemap__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.l-footer__sitemap__anchor {
+  line-height: 1;
+  color: #707070;
+}
+.l-footer__sitemap__anchor:hover {
+  opacity: 0.7;
+}
+.l-footer__copyright {
+  margin-top: 3rem;
+  text-align: center;
+  list-style: 1;
 }
 
 .p-index {
   display: block;
+}
+.p-index__content__text {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-left: 2rem;
+  text-align: justify;
+}
+.p-index__content .c-head-1 {
+  margin-bottom: 2rem;
+}
+.p-index__content .c-head-1:not(:first-child) {
+  margin-top: 3rem;
 }
 
 .p-sample {
@@ -81,5 +235,5 @@ a {
 .u-layout {
   margin: 0 auto;
   max-width: calc(1170px + 8rem);
-  padding: 0 4 rem;
+  padding: 0 4rem;
 }
