@@ -30,11 +30,16 @@
 
   &__logo {
     display: block;
-    height: 60px;
-    width: 120px;
+    height: 6rem;
+    width: 12rem;
     background-color: transparent;
     border: 1px solid #707070;
     text-align: center;
+
+    @include mq_sp {
+      height: 4rem;
+      width: 10rem;
+    }
 
     &__anchor {
       text-decoration: none;
@@ -49,6 +54,12 @@
       span {
         line-height: 6rem;
         color: #707070;
+        display: block;
+
+        @include mq_sp {
+          line-height: 3.8rem;
+          font-size: 2rem;
+        }
       }
     }
 

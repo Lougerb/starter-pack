@@ -46,7 +46,15 @@
   &__sitemap {
     display: flex;
 
+    @include mq_sp {
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
     &__list {
+      @include mq_sp {
+        text-align: center;
+      }
       &.is-col-1 {
         margin-right: 5rem;
       }

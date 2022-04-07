@@ -8,7 +8,7 @@
     position: fixed;
     top: 5.9rem;
     right: -100%;
-    transition: all 0.5s;
+    transition: all 0.3s;
     height: calc(100% - 6.1rem);
     width: 100%;
     z-index: 98;
@@ -16,7 +16,7 @@
     display: block;
   }
 
-  &.show-nav {
+  .show-nav &{
     right: 0;
   }
 
@@ -25,8 +25,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 3rem;
+    position: relative;
+    overflow: hidden;
     // border: 1px solid black;
 
     @include mq_pc {
@@ -35,13 +37,48 @@
   }
 
   &__line {
-    width: 5rem;
-    height: 0.5rem;
+    width: 4rem;
+    height: 0.3rem;
     background-color: #707070;
+    position: absolute;
+    left: 0;
+    right: auto;
+    transition: all 0.3s;
 
-    &:not(:last-child) {
-      margin-bottom: 1rem;
+    &:first-child {
+      top: 0;
+
+      .show-nav & {
+        transform: rotate(45deg) translate(1rem, 1rem);
+        transition: all 0.3s;
+      }
     }
+
+    &:nth-child(2) {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      transition: all 0.3s;
+
+      .show-nav & {
+        right: -200%;
+        transition: all 0.3s;
+      }
+    }
+
+    &:last-child {
+      bottom: 0;
+
+      .show-nav & {
+        transform: rotate(-45deg) translate(1rem, -1rem);
+        transition: all 0.3s;
+      }
+    }
+
+    // &:not(:last-child) {
+    //   margin-bottom: 1rem;
+    // }
   }
 
   &__li {
@@ -75,12 +112,14 @@
       &::after {
         content: "";
         height: 100%;
-        width: 100%;
+        width: calc(100% - 1px);
         position: absolute;
         border-left: 1px solid #707070;
         border-right: 1px solid #707070;
         top: 0;
         left: 0;
+        right: 0;
+        margin: auto;
       }
     }
   }

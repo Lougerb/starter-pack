@@ -36,3 +36,31 @@ a {
   color: #707070;
   text-decoration: none;
 }
+
+
+/**
+ * Heading
+ */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5 {
+     margin: 0;
+ }
+ 
+ /**
+  * Paragraph
+  */
+ p {
+     margin: 0;
+ }
+ 
+ /**
+  * List
+  */
+ ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
