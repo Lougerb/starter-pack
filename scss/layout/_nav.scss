@@ -8,7 +8,7 @@
     position: fixed;
     top: 5.9rem;
     right: -100%;
-    transition: all 0.3s;
+    transition: all 0.2s;
     height: calc(100% - 6.1rem);
     width: 100%;
     z-index: 98;
@@ -26,10 +26,9 @@
     justify-content: center;
     align-items: center;
     width: 4rem;
-    height: 3rem;
+    height: 4rem;
     position: relative;
     overflow: hidden;
-    // border: 1px solid black;
 
     @include mq_pc {
       display: none;
@@ -39,18 +38,27 @@
   &__line {
     width: 4rem;
     height: 0.3rem;
+    border-radius: 0.5rem;
     background-color: #707070;
     position: absolute;
     left: 0;
     right: auto;
     transition: all 0.3s;
+    transform: rotate(0deg);
+    margin: auto;
+
+    .show-nav & {
+      top: 50% !important;
+      bottom: 50% !important;
+      transition: all 0.3s;
+      margin: auto;
+    }
 
     &:first-child {
-      top: 0;
+      top: 20%;
 
       .show-nav & {
-        transform: rotate(45deg) translate(1rem, 1rem);
-        transition: all 0.3s;
+        transform: rotate(45deg);
       }
     }
 
@@ -59,20 +67,18 @@
       bottom: 0;
       right: 0;
       margin: auto;
-      transition: all 0.3s;
 
       .show-nav & {
         right: -200%;
-        transition: all 0.3s;
       }
     }
 
     &:last-child {
-      bottom: 0;
+      bottom: 20%;
 
       .show-nav & {
-        transform: rotate(-45deg) translate(1rem, -1rem);
-        transition: all 0.3s;
+        transform: rotate(-45deg);
+
       }
     }
 
